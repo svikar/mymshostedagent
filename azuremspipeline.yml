@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    echo "Testing Microsofthosted agent accessibility"
+    echo "Agent OS: $(Agent.OS)"
+    echo "Agent Name: $(Agent.Name)"
+    echo "Agent Machine Name: $(Agent.MachineName)"
+    echo "Agent Version: $(Agent.Version)"
+    echo "Job is running successfully"
+  displayName: 'Test Microsofthosted Agent'
